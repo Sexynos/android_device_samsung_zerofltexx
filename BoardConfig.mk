@@ -50,9 +50,6 @@ TARGET_SPECIFIC_HEADER_PATH += device/samsung/zerofltexx/include
 # Kernel
 TARGET_KERNEL_CONFIG := lineageos_zerofltexx_defconfig
 
-# Manifest
-DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/configs/manifest.xml
-
 # OpenMAX-shims
 TARGET_LD_SHIM_LIBS += \
 	/system/lib/omx/libOMX.Exynos.AVC.Decoder.so|/vendor/lib/libui_shim.so \
