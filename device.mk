@@ -34,18 +34,6 @@ PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_0.xml
 
-# Camera-Shim
-PRODUCT_PACKAGES += \
-	libexynoscamera_shim
-
-# Cpboot-daemon
-PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/prebuilt/cbd:$(TARGET_COPY_OUT_SYSTEM)/bin/cbd
-
-# Fingerprint-Shim
-PRODUCT_PACKAGES += \
-	libbauthtzcommon_shim
-
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Inherit from universal7420-common
@@ -69,11 +57,6 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/nfc/libnfc-sec-hal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-hal.conf \
 	$(LOCAL_PATH)/configs/nfc/libnfc-sec.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec.conf \
 	$(LOCAL_PATH)/configs/nfc/libnfc-brcm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf
-
-# OpenMAX-shims
-PRODUCT_PACKAGES += \
-    libui_shim \
-    libExynosOMX_shim
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/android.hardware.media.omx@1.0-service.rc:system/vendor/etc/init/android.hardware.media.omx@1.0-service.rc
